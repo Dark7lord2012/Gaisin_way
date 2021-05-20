@@ -1,11 +1,18 @@
 .header {
+  box-sizing: border-box;
   outline: 1px solid red;
 }
 
 .header__wrapper {
-  max-width: 1170px;
   display: grid;
-  margin-right: auto;
-  margin-left: auto;
+  min-height: 99px;
+  grid-template-columns: 60px 1fr;
+  align-items: center;
   outline: 1px solid red;
+}
+
+.header__nav {
+  display: flex;
+  margin-left: 20px;
+  justify-content: flex-end;
 }
