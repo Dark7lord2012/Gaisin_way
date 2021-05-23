@@ -1,0 +1,51 @@
+.places-slider {
+  padding-top: 95px;
+  outline: 1px solid red;
+  outline-offset: -1px;
+}
+
+.places-slider__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.places-slider__tabs-list {
+  margin: 0 0 90px;
+  padding: 0 0 15px;
+  display: flex;
+  width: 902px;
+  justify-content: space-between;
+  list-style: none;
+
+  border-bottom: 1px solid rgba($dark-two, 0.3);
+}
+
+.places-slider__tab-link {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 500;
+  color: rgba($dark-two, 0.3);
+  text-decoration: none;
+  letter-spacing: -0.41px;
+
+  &:hover,
+  &:focus {
+    color: $dark-two;
+  }
+
+  &--active {
+    color: $accent;
+  }
+}
+
+.places-slider__slides-list {
+  outline: 1px solid #0f0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.places-slider__slide {
+  outline: 1px solid #00f;
+}

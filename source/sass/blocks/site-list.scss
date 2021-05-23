@@ -3,8 +3,13 @@
   display: flex;
   justify-content: flex-end;
   padding: 0;
-  margin: 0;
+  margin: 0 11px 0 0;
   list-style: none;
+}
+
+.site-list__item {
+  display: flex;
+  align-items: center;
 }
 
 .site-list__item + .site-list__item {
@@ -13,7 +18,24 @@
 
 .site-list__link {
   font-size: 14px;
-  line-height: auto;
+  line-height: 17px;
+  font-weight: 500;
   color: $dark;
   text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: $accent;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  &--phone {
+    font-size: 18px;
+    line-height: 32px;
+    text-decoration: underline;
+    margin-left: 13px;
+  }
 }
