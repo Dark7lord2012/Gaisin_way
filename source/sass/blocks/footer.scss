@@ -5,7 +5,94 @@
 .footer__wrapper {
   max-width: 1170px;
   display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   margin-right: auto;
   margin-left: auto;
+  margin-bottom: 75px;
   outline: 1px solid red;
+}
+
+.footer__title {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 18px;
+  line-height: 32px;
+  color: $dark;
+  font-weight: 600;
+  grid-column: 1 / -1;
+}
+
+.footer__next-travels {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 50px;
+}
+
+.footer__links-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer__list-link {
+  a {
+    font-size: 14px;
+    line-height: 17px;
+    font-weight: normal;
+    color: rgba($dark, 0.5);
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      color: $dark;
+    }
+  }
+}
+
+.footer__contacts {
+  margin-left: 40px;
+  margin-right: 50px;
+  padding-left: 90px;
+  padding-right: 33px;
+
+  border-right: 1px solid $grey;
+  border-left: 1px solid $grey;
+}
+
+.footer__contacts-list {
+  margin: 0;
+  padding-left: 40px;
+  list-style: none;
+
+  li + li {
+    margin-top: 20px;
+  }
+}
+
+.footer__contact-link {
+  color: $accent;
+
+  &--email {
+    font-size: 14px;
+    line-height: 17px;
+    font-weight: normal;
+  }
+
+  &--phone {
+    font-size: 16px;
+    line-height: 32px;
+  }
+}
+
+.footer__corporate-travels {
+  //
+}
+
+.footer__text {
+  margin: 0;
+  width: 320px;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: normal;
+  color: rgba($dark, 0.5);
 }

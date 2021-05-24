@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <title>Way - путешествие по Европе</title>
   <link rel="stylesheet" href="css/style.min.css">
+  <link rel="preload" href="fonts/Montserrat-Regular.woff2" as="font">
+  <link rel="preload" href="fonts/Montserrat-SemiBold.woff2" as="font">
+  <link rel="preload" href="fonts/Montserrat-Medium.woff2" as="font">
+  <link rel="preload" href="fonts/Montserrat-Bold.woff2" as="font">
 </head>
 <body class="body">
   <header class="body__header header">
@@ -213,7 +217,7 @@
           Специально для Вас  мы разработали 2 пакета цен с разными условиями, отталкиваясь от Ваших потребностей и возможностей. Выберите для себя лучший вариант отпуска и отдохните на все 100%!
         </p>
         <p class="prices__phone">
-          Свяжитесь с нами
+          <span>Свяжитесь с нами</span>
           <!-- Или это просто текст? -->
           <a href="tel:+749978468446">+7 (499) -784-684-46</a>
         </p>
@@ -258,12 +262,12 @@
 
     <section class="callback-form">
       <div class="callback-form__wrapper wrapper">
-        <form action="#">
+        <form class="callback-form__form" action="#">
           <h2 class="callback-form__title">У вас остались вопросы?</h2>
           <p class="callback-form__text">Оставьте свой номер или e-mail и мы свяжемся с Вами</p>
-          <input type="tel" name="phone" placeholder="Введите 10 цифр номера">
-          <input type="email" name="email" placeholder="E-mail">
-          <button type="submit">Отправить</button>
+          <input class="callback-form__input" type="tel" name="phone" placeholder="Введите 10 цифр номера">
+          <input class="callback-form__input" type="email" name="email" placeholder="E-mail">
+          <button class="callback-form__button-submit" type="submit">Отправить</button>
         </form>
       </div>
     </section>
