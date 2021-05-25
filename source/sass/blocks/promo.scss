@@ -13,7 +13,20 @@
 }
 
 .promo__wrapper {
-  padding: 185px 60px 30px 700px;
+  display: flex;
+  outline: 1px solid #00f;
+  height: 100%;
+}
+
+.promo__inner {
+  // padding: 185px 60px 30px 700px;
+  display: flex;
+  width: 412px;
+  flex-wrap: wrap;
+  margin-top: 185px;
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: 58px;
   color: $white;
   outline: 1px solid #00ff00;
 }
@@ -28,6 +41,7 @@
 }
 
 .promo__text {
+  width: 376px;
   margin-top: 0;
   margin-bottom: 35px;
   width: 376px;
@@ -38,13 +52,13 @@
 }
 
 .promo__link {
-  display: inline;
+  display: inline-flex;
+  justify-content: space-between;
   width: 340px;
   min-height: 75px;
   box-sizing: border-box;
   flex-grow: 0;
   padding: 30px 40px;
-  padding-right: 60px;
 
   font-size: 12px;
   line-height: 15px;

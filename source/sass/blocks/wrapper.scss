@@ -1,8 +1,9 @@
 .wrapper {
-  max-width: calc(1170px);
+  max-width: calc(1200px);
   min-width: calc($desktop-width);
   box-sizing: border-box;
   display: grid;
   margin-right: auto;
   margin-left: auto;
+  padding: 0 15px;
 }

@@ -17,6 +17,7 @@
   display: flex;
   width: 902px;
   justify-content: space-between;
+  overflow-x: auto;
   list-style: none;
 
   border-bottom: 1px solid rgba($dark-two, 0.3);
