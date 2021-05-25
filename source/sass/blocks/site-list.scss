@@ -1,7 +1,9 @@
 .site-list {
   outline: 1px solid #0000ff;
   display: flex;
+  flex-wrap: wrap;
   justify-content: flex-end;
+  max-width: 90%;
   padding: 0;
   margin: 0 11px 0 0;
   list-style: none;
@@ -33,9 +35,22 @@
   }
 
   &--phone {
+    display: flex;
+    align-items: center;
     font-size: 18px;
     line-height: 32px;
     text-decoration: underline;
+    margin-right: 2px;
     margin-left: 13px;
+
+
+    svg {
+      width: 30px;
+      height: 30px;
+      fill: none;
+      margin-right: 10px;
+      transform: translate(2px, 1px);
+      stroke: currentColor;
+    }
   }
 }

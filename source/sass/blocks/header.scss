@@ -6,6 +6,7 @@
 .header__wrapper {
   display: grid;
   min-height: 99px;
+  padding-top: 3px;
   grid-template-columns: 60px 1fr;
   align-items: center;
   outline: 1px solid red;
@@ -15,4 +16,8 @@
   display: flex;
   margin-left: 20px;
   justify-content: flex-end;
+}
+
+.header__toggle {
+  display: none;
 }

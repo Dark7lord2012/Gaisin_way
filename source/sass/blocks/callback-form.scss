@@ -1,20 +1,21 @@
 .callback-form {
-  margin-bottom: 170px;
+  margin-bottom: 169px;
 }
 
 .callback-form__wrapper {
-  outline: 1px solid #0f0;
+  // outline: 1px solid #0f0;
   min-height: 455px;
 
   background-image: url("../img/sunset-sky-sea.jpg");
   background-repeat: no-repeat;
-  background-position: left top;
+  background-position: 12px top;
   background-size: contain;
 }
 
 .callback-form__form {
   background-color: $white;
   margin-left: auto;
+  margin-right: -12px;
   box-sizing: border-box;
   display: flex;
   justify-content: center;
@@ -29,7 +30,7 @@
 
 .callback-form__title {
   margin-top: 0;
-  margin-bottom: 10px;
+  margin-bottom: 0px;
   width: 100%;
   text-align: center;
   font-size: 25px;
@@ -39,8 +40,8 @@
 }
 
 .callback-form__text {
-  margin-top: 0;
-  margin-bottom: 24px;
+  margin-top: -1px;
+  margin-bottom: 0px;
   width: 100%;
   text-align: center;
   font-size: 16px;
@@ -50,17 +51,70 @@
 
 }
 
-.callback-form__input {
+.callback-form__label-input {
+  display: flex;
+  margin-top: 12px;
+  margin-bottom: auto;
   width: calc(50% - 10px);
-  box-sizing: border-box;
 
-  & + .callback-form__input {
+  &:first-of-type {
+    position: relative;
+    .callback-form__input {
+      padding-left: 50px;
+    }
+
+    &::before {
+      position: absolute;
+      top: 10px;
+      left: 15px;
+      content: "*";
+      color: $accent;
+      font-size: 17px;
+      line-height: 15px;
+    }
+
+    &::after {
+      position: absolute;
+      top: 17.5px;
+      left: 25px;
+      content: "+7";
+      color: $dark;
+      font-size: 14px;
+      line-height: 15px;
+    }
+  }
+
+  & + .callback-form__label-input {
     margin-left: 20px;
   }
 }
 
+.callback-form__input {
+  width: 100%;
+  height: 50px;
+  box-sizing: border-box;
+  padding: 15px;
+  border: 1px solid rgba($dark-two, 0.3);
+  font: inherit;
+  color: $dark;
+  font-size: 14px;
+  line-height: auto;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    border-color: $dark-two;
+  }
+
+  &:invalid {
+    border-color: $accent;
+    outline: none;
+  }
+}
+
 .callback-form__button-submit {
-  margin-top: 25px;
+  margin-top: auto;
+  min-height: 50px;
   padding: 17px 42px 16px;
   box-sizing: border-box;
   text-align: center;

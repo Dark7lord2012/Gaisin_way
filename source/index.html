@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <title>Way - путешествие по Европе</title>
   <link rel="stylesheet" href="css/style.min.css">
-  <link rel="preload" href="fonts/Montserrat-Regular.woff2" as="font">
-  <link rel="preload" href="fonts/Montserrat-SemiBold.woff2" as="font">
-  <link rel="preload" href="fonts/Montserrat-Medium.woff2" as="font">
-  <link rel="preload" href="fonts/Montserrat-Bold.woff2" as="font">
+  <link rel="preload" href="fonts/Montserrat-Regular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Montserrat-SemiBold.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Montserrat-Medium.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Montserrat-Bold.woff2" as="font" crossorigin="anonymous">
 </head>
 <body class="body">
   <header class="body__header header">
@@ -17,6 +17,7 @@
         <img class="header__logo-img" width="58" height="22" src="img/logo.svg" alt="Way: логотип">
       </a>
       <nav class="header__nav">
+        <button class="header__toggle">Открыть/закрыть меню</button>
         <ul class="site-list">
           <li class="site-list__item">
             <a href="#" class="site-list__link">О путешествии</a>
@@ -26,6 +27,9 @@
           </li>
           <li class="site-list__item">
             <a class="site-list__link site-list__link--phone" href="tel:+749978468446">
+              <svg width="30" height="30">
+                <use href="img/sprite.svg#icon-phone"></use>
+              </svg>
               +7 (499) -784-684-46
             </a>
           </li>
@@ -219,7 +223,12 @@
         <p class="prices__phone">
           <span>Свяжитесь с нами</span>
           <!-- Или это просто текст? -->
-          <a href="tel:+749978468446">+7 (499) -784-684-46</a>
+          <a href="tel:+749978468446">
+            <svg width="30" height="30">
+              <use href="img/sprite.svg#icon-phone"></use>
+            </svg>
+            +7 (499) -784-684-46
+          </a>
         </p>
         <ul class="prices__list">
           <li class="prices__list-item price">
@@ -263,10 +272,16 @@
     <section class="callback-form">
       <div class="callback-form__wrapper wrapper">
         <form class="callback-form__form" action="#">
-          <h2 class="callback-form__title">У вас остались вопросы?</h2>
+          <h2 class="callback-form__title">У Вас остались вопросы?</h2>
           <p class="callback-form__text">Оставьте свой номер или e-mail и мы свяжемся с Вами</p>
-          <input class="callback-form__input" type="tel" name="phone" placeholder="Введите 10 цифр номера">
-          <input class="callback-form__input" type="email" name="email" placeholder="E-mail">
+          <label class="callback-form__label-input">
+            <span class="visually-hidden">Телефон</span>
+            <input class="callback-form__input" type="number" name="phone" placeholder="Введите 10 цифр номера">
+          </label>
+          <label class="callback-form__label-input">
+            <span class="visually-hidden">Почта</span>
+            <input class="callback-form__input" type="email" name="email" placeholder="E-mail">
+          </label>
           <button class="callback-form__button-submit" type="submit">Отправить</button>
         </form>
       </div>
@@ -335,12 +350,18 @@
         <h2 class="footer__title">Наши контакты</h2>
         <ul class="footer__contacts-list">
           <li>
-            <a class="footer__contact-link" href="mail:puteshestviemechta@gmail.ru">
-              puteshestviemechta@gmail.ru
+            <a class="footer__contact-link footer__contact-link--email" href="mail:puteshestviemechta@gmail.ru">
+              <svg width="26" height="20">
+                <use href="img/sprite.svg#icon-email"></use>
+              </svg>
+              <span>puteshestviemechta@gmail.ru</span>
             </a>
           </li>
           <li>
-            <a class="footer__contact-link" href="tel:+749978468446">
+            <a class="footer__contact-link footer__contact-link--phone" href="tel:+749978468446">
+              <svg width="30" height="30">
+                <use href="img/sprite.svg#icon-phone"></use>
+              </svg>
               +7 (499) -784-684-46
             </a>
           </li>

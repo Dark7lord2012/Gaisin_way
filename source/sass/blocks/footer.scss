@@ -3,42 +3,55 @@
 }
 
 .footer__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
   max-width: 1170px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
   margin-right: auto;
-  margin-left: auto;
   margin-bottom: 75px;
+  margin-left: auto;
+  padding: 0 10px 0 13px;
+
   outline: 1px solid red;
 }
 
 .footer__title {
   margin-top: 0;
-  margin-bottom: 20px;
+  margin-bottom: 0;
+
+  font-weight: 600;
   font-size: 18px;
   line-height: 32px;
   color: $dark;
-  font-weight: 600;
+
   grid-column: 1 / -1;
 }
 
 .footer__next-travels {
   display: grid;
+  width: 350px;
+
+  column-gap: 30px;
+
   grid-template-columns: 1fr 1fr 1fr;
-  column-gap: 50px;
 }
 
 .footer__links-list {
-  margin: 0;
+  margin: 20px 0 0;
   padding: 0;
+
   list-style: none;
+
+  li + li {
+    margin-top: 8px;
+  }
 }
 
 .footer__list-link {
   a {
+    font-weight: normal;
     font-size: 14px;
     line-height: 17px;
-    font-weight: normal;
     color: rgba($dark, 0.5);
     text-decoration: none;
 
@@ -50,49 +63,70 @@
 }
 
 .footer__contacts {
-  margin-left: 40px;
-  margin-right: 50px;
-  padding-left: 90px;
-  padding-right: 33px;
+  margin-left: 52px;
+  // margin-right: 50px;
+  align-self: stretch;
+  // padding-left: 90px;
+  padding-right: 5px;
+  width: 267px;
 
-  border-right: 1px solid $grey;
-  border-left: 1px solid $grey;
+  // border-right: 1px solid $grey;
+  // border-left: 1px solid $grey;
 }
 
 .footer__contacts-list {
-  margin: 0;
-  padding-left: 40px;
+  margin: 22px 0 0;
+  padding: 0;
+
   list-style: none;
 
   li + li {
-    margin-top: 20px;
+    margin-top: 17px;
   }
 }
 
 .footer__contact-link {
+  display: flex;
   color: $accent;
+  position: relative;
+
+  svg {
+    margin-right: 10px;
+  }
 
   &--email {
+    font-weight: normal;
     font-size: 14px;
     line-height: 17px;
-    font-weight: normal;
+
+
+    svg {
+      margin-right: 15px;
+    }
   }
 
   &--phone {
+    position: relative;
     font-size: 16px;
     line-height: 32px;
+
+    &::before {
+      width: 30px;
+      height: 30px;
+    }
   }
 }
 
 .footer__corporate-travels {
-  //
+  width: 320px;
 }
 
 .footer__text {
-  margin: 0;
   width: 320px;
+  margin: 20px 0 0;
+
+  font-weight: normal;
   font-size: 14px;
   line-height: 24px;
-  font-weight: normal;
   color: rgba($dark, 0.5);
 }
