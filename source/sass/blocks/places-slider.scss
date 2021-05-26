@@ -1,13 +1,14 @@
 .places-slider {
   padding-top: 95px;
   padding-bottom: 220px;
-  outline: 1px solid red;
-  outline-offset: -1px;
-  // overflow-x: hidden;
 
   @media (max-width: $tablet-width-max) {
     padding-top: 98px;
     padding-bottom: 20px;
+  }
+
+  @media (max-width: $mobile-width-max) {
+    padding-top: 40px;
   }
 }
 
@@ -22,31 +23,39 @@
 }
 
 .places-slider__tabs-list {
+  display: flex;
+  justify-content: space-between;
+  width: 902px;
   margin: 0 0 79px;
   padding: 0 0 15px;
-  display: flex;
-  width: 902px;
-  justify-content: space-between;
   overflow-x: auto;
+
   list-style: none;
 
   border-bottom: 1px solid rgba($dark-two, 0.3);
 
   @media (max-width: $tablet-width-max) {
-    gap: 0 100px;
-    padding-left: 37px;
-    margin-bottom: 31px;
-    --scrollbar-size: calc(100vw - 100%);
-    width: calc(100vw - var(--scrollbar-size));
     box-sizing: border-box;
+    width: calc(100vw - var(--scrollbar-size));
+    margin-bottom: 31px;
+    padding-left: 37px;
     overflow: auto;
+
+    gap: 0 100px;
+    --scrollbar-size: calc(100vw - 100%);
+  }
+
+  @media (max-width: $mobile-width-max) {
+    margin-bottom: 22px;
+    margin-left: 15px;
+    padding-left: 0;
   }
 }
 
 .places-slider__tab-link {
+  font-weight: 500;
   font-size: 20px;
   line-height: 24px;
-  font-weight: 500;
   color: rgba($dark-two, 0.3);
   text-decoration: none;
   letter-spacing: -0.41px;
@@ -62,12 +71,8 @@
 }
 
 .places-slider__slides-list {
-  outline: 1px solid #0f0;
   margin: 0;
   padding: 0;
-  list-style: none;
-}
 
-.places-slider__slide {
-  outline: 1px solid #00f;
+  list-style: none;
 }

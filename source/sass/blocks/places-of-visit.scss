@@ -4,68 +4,88 @@
   @media (max-width: $tablet-width-max) {
     padding-top: 80px;
   }
+
+  @media (max-width: $mobile-width-max) {
+    padding-top: 109px;
+  }
 }
 
 .places-of-visit__wrapper {
-  outline: 1px solid #0f0;
-
   @media (max-width: $tablet-width-max) {
     display: flex;
     flex-direction: column;
     align-items: center;
-
   }
 }
 
 .places-of-visit__title {
   position: relative;
+
   width: min-content;
   margin-top: 0;
   margin-bottom: 65px;
 
+  font-weight: 600;
   font-size: 55px;
   line-height: 80px;
-  font-weight: 600;
   color: $dark-two;
   letter-spacing: -1.25px;
 
   &::after {
+    content: "";
     position: absolute;
-    left: 0;
     bottom: -33px;
+    left: 0;
+
     width: 228px;
     height: 3px;
-    content: "";
+
     background-color: $accent;
   }
 
   @media (max-width: $tablet-width-max) {
+    width: auto;
+    margin-bottom: 20px;
+
     font-size: 30px;
     line-height: 45px;
-    width: auto;
     letter-spacing: 0;
-    margin-bottom: 20px;
 
     &::after {
       display: none;
     }
   }
+
+  @media (max-width: $mobile-width-max) {
+    width: 100%;
+
+    font-size: 24px;
+    line-height: 36px;
+    text-align: center;
+  }
 }
 
 .places-of-visit__text {
   width: 328px;
+  max-width: 100%;
   margin-top: 0;
   margin-bottom: 55px;
+
+  font-weight: normal;
   font-size: 16px;
   line-height: 28px;
-  font-weight: normal;
   color: $dark-two;
   letter-spacing: -0.47px;
 
   @media (max-width: $tablet-width-max) {
     width: 343px;
-    text-align: center;
     margin-bottom: 40px;
+
+    text-align: center;
+  }
+
+  @media (max-width: $mobile-width-max) {
+    margin-bottom: 20px;
   }
 }
 
@@ -73,24 +93,27 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  // display: grid;
-  // grid-template-columns: repeat(3, 350px);
-  // justify-content: space-evenly;
-  row-gap: 102px;
   margin: 0;
   padding: 0;
+
   list-style: none;
 
+  row-gap: 102px;
+
   @media (max-width: $tablet-width-max) {
-    row-gap: 20px;
     column-gap: 30px;
+
+    row-gap: 20px;
+  }
+
+  @media (max-width: $mobile-width-max) {
+    row-gap: 35px;
   }
 }
 
 .places-of-visit__list-item {
-  // margin-left: auto;
-  // margin-right: auto;
   position: relative;
+
   padding: 0;
 
   img {
@@ -98,6 +121,7 @@
     align-self: stretch;
     width: 100%;
     height: 100%;
+
     object-fit: cover;
   }
 
@@ -106,9 +130,9 @@
   }
 
   &:last-child {
+    margin-right: 60px;
     // Временно, для ПП, но переполнение не пройдет
     margin-left: 120px;
-    margin-right: 60px;
   }
 
   @media (max-width: $tablet-width-max) {
@@ -121,6 +145,12 @@
       margin: 10px 0 0;
     }
   }
+
+  @media (max-width: $mobile-width-max) {
+    &:last-child {
+      margin: 0;
+    }
+  }
 }
 
 .places-of-visit__link {
@@ -130,6 +160,7 @@
   align-items: center;
   width: 350px;
   height: 430px;
+
   text-decoration: none;
 
   @media (max-width: $tablet-width-max) {
@@ -142,16 +173,17 @@
   position: absolute;
   bottom: 0;
 
+  box-sizing: border-box;
   min-width: 215px;
   max-width: 350px;
   min-height: 62px;
   padding: 17px 15px;
-  box-sizing: border-box;
 
   font-size: 24px;
   line-height: 29px;
-  letter-spacing: -0.41px;
-  color: $dark-two;
   text-align: center;
+  color: $dark-two;
+  letter-spacing: -0.41px;
+
   background-color: $white;
 }

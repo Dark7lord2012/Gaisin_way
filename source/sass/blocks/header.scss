@@ -1,8 +1,6 @@
 .header {
   box-sizing: border-box;
 
-  outline: 1px solid red;
-
   @media (max-width: $tablet-width-max) {
     svg:nth-of-type(2) {
       display: none;
@@ -31,11 +29,9 @@
       position: absolute;
       top: 0;
       right: 0;
-      z-index: 1;
+      z-index: 2;
 
       margin-right: 0;
-
-      background-color: black;
     }
 
     svg:first-of-type {
@@ -59,8 +55,6 @@
     flex-grow: 1;
     width: 100%;
     margin: 25px -20px 0;
-
-    outline: 1px solid red;
   }
 
   .header__toggle {
@@ -78,8 +72,6 @@
   min-height: 99px;
   padding-top: 3px;
 
-  outline: 1px solid red;
-
   grid-template-columns: 60px 1fr;
 
   @media (max-width: $tablet-width-max) {
@@ -91,6 +83,8 @@
 }
 
 .header__nav {
+  z-index: 1;
+
   display: flex;
   justify-content: flex-end;
   margin-left: 20px;
@@ -123,6 +117,11 @@
     &:active {
       opacity: 0.6;
     }
+  }
+
+  @media (max-width: $mobile-width-max) {
+    width: 50px;
+    margin-right: -16px;
   }
 }
 

@@ -28,7 +28,7 @@
       <nav class="header__nav">
         <ul class="site-list">
           <li class="site-list__item">
-            <a href="#" class="site-list__link">
+            <a href="index.html#about" class="site-list__link">
               <span>О путешествии</span>
               <svg width="25" height="25">
                 <use href="img/sprite.svg#icon-arrow-right"></use>
@@ -36,7 +36,7 @@
             </a>
           </li>
           <li class="site-list__item">
-            <a href="#" class="site-list__link">
+            <a href="index.html#prices" class="site-list__link">
               <span>Цены</span>
               <svg width="25" height="25">
                 <use href="img/sprite.svg#icon-arrow-right"></use>
@@ -78,7 +78,7 @@
 
     <section class="places-of-visit">
       <div class="places-of-visit__wrapper wrapper">
-        <h2 class="places-of-visit__title">Места посещения</h2>
+        <h2 class="places-of-visit__title" id="about">Места посещения</h2>
         <p class="places-of-visit__text">
           Вы можете выбрать полный тур или частичный, с посещением первых 3 мест
         </p>
@@ -87,6 +87,9 @@
           <li class="places-of-visit__list-item">
             <a class="places-of-visit__link" href="#">
               <picture>
+                <source type="image/webp" media="(max-width: 1023px)" srcset="img/photo-greecy-tablet.webp 1x, img/photo-greecy-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/photo-greecy.webp 1x, img/photo-greecy@2x.webp">
+
                 <source media="(max-width: 1023px)" srcset="img/photo-greecy-tablet.jpg 1x, img/photo-greecy-tablet@2x.jpg 2x">
                 <img width="350" height="430" srcset="img/photo-greecy.jpg 1x, img/photo-greecy@2x.jpg" alt="Греция: гора">
               </picture>
@@ -96,6 +99,9 @@
           <li class="places-of-visit__list-item">
             <a class="places-of-visit__link" href="#">
               <picture>
+                <source type="image/webp" media="(max-width: 1023px)" srcset="img/photo-albania-tablet.webp 1x, img/photo-albania-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/photo-albania.webp 1x, img/photo-albania@2x.webp">
+
                 <source media="(max-width: 1023px)" srcset="img/photo-albania-tablet.jpg 1x, img/photo-albania-tablet@2x.jpg 2x">
                 <img width="350" height="430" srcset="img/photo-albania.jpg 1x, img/photo-albania@2x.jpg" alt="Албания: берег с высоты птичьего полета">
               </picture>
@@ -105,6 +111,9 @@
           <li class="places-of-visit__list-item">
             <a class="places-of-visit__link" href="#">
               <picture>
+                <source type="image/webp" media="(max-width: 1023px)" srcset="img/photo-macedonia-tablet.webp 1x, img/photo-macedonia-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/photo-macedonia.webp 1x, img/photo-macedonia@2x.webp">
+
                 <source media="(max-width: 1023px)" srcset="img/photo-macedonia-tablet.jpg 1x, img/photo-macedonia-tablet@2x.jpg 2x">
                 <img width="350" height="430" srcset="img/photo-macedonia.jpg 1x, img/photo-macedonia@2x.jpg" alt="Македония: церковь у берега">
               </picture>
@@ -114,6 +123,9 @@
           <li class="places-of-visit__list-item">
             <a class="places-of-visit__link" href="#">
               <picture>
+                <source type="image/webp" media="(max-width: 1023px)" srcset="img/photo-montenegro-tablet.webp 1x, img/photo-montenegro-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/photo-montenegro.webp 1x, img/photo-montenegro@2x.webp">
+
                 <source media="(max-width: 1023px)" srcset="img/photo-montenegro-tablet.jpg 1x, img/photo-montenegro-tablet@2x.jpg 2x">
                 <img width="350" height="430" srcset="img/photo-montenegro.jpg 1x, img/photo-montenegro@2x.jpg 2x" alt="Черногория: вид сверху на реку">
               </picture>
@@ -123,6 +135,9 @@
           <li class="places-of-visit__list-item">
             <a class="places-of-visit__link" href="#">
               <picture>
+                <source type="image/webp" media="(max-width: 1023px)" srcset="img/photo-croatia-tablet.webp 1x, img/photo-croatia-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/photo-croatia.webp 1x, img/photo-croatia@2x.webp">
+
                 <source media="(max-width: 1023px)" srcset="img/photo-croatia-tablet.jpg 1x, img/photo-croatia-tablet@2x.jpg 2x">
                 <img width="350" height="430" srcset="img/photo-croatia.jpg 1x, img/photo-croatia@2x.jpg 2x" alt="Хорватия: наполненная водой пещера со сталактитами">
               </picture>
@@ -157,9 +172,6 @@
         <ul class="places-slider__slides-list">
           <li class="places-slider__slide slide slide--greecy slide--active">
             <h3 class="slide__title">Греция</h3>
-            <!-- <picture>
-              <img class="slide__img" width="430" height="596" srcset="img/card-greece.jpg 1x, img/card-greece@2x.jpg 2x" alt="Греция: гора">
-            </picture> -->
             <p class="slide__text">
               На севере Греции находится один из крупнейших комплексов монастырей, расположенных на вершинах скал. Название его «Метеора» буквально переводится как «висящие в воздухе». Этот монастырь основная цель нашего путешествия в Греции. После покарения скал из песчанника и обломочной горной породы, достигающих в высоту 600 метров, наградой будет неописуемая красота природы и атмосфера, царящая в монастырях Метеоры.
             </p>
@@ -170,7 +182,10 @@
                 Метеоры в Греции можно сравнить разве что с Монсерратт в Испании. Такие же высоченные скалы. Но здесь потрясает масштаб. Огромная территория, высоко в горах. Ощущение такое, как будто стоишь на краю света!
               </p>
               <p class="review__author">
-                <img src="img/author-vlada.jpg" alt="Брюнетка" class="review__author-img">
+                <picture>
+                  <source type="image/webp" srcset="img/author-vlada.webp 1x, img/author-vlada@2x.webp 2x">
+                  <img srcset="img/author-vlada.jpg 1x, img/author-vlada@2x.jpg 2x" alt="Брюнетка" class="review__author-img" width="38">
+                </picture>
                 <span class="review__author-name">Влада Голицина</span>
               </p>
             </div>
@@ -178,7 +193,6 @@
 
           <li class="places-slider__slide slide slide--albania">
             <h3 class="slide__title">Албания</h3>
-            <img class="slide__img" src="#" alt="Греция: гора">
             <p class="slide__text">
               В Албании мы посетим Курорт Ксамиль. Этот курорт поразит вас чистейшей водой и удивительным пляжем. Вначале кажется, что на пляже вас встречает обычный, правда невероятно белоснежный и слишком крупный песок. Однако, присмотревшись, можно понять, что это не песок, а камни, перетёртые до такого мелкого состояния.
             </p>
@@ -188,13 +202,18 @@
               <p class="review__text">
                 Замечательный курорт, обязательно стоит посетить. В следующий раз возьму с собой сестру, чтобы тоже смогла вкусить все красоты природы :)
               </p>
-              <p class="review__author">Маришка</p>
+              <p class="review__author">
+                <picture>
+                  <source type="image/webp" srcset="img/author-marishka.webp 1x, img/author-marishka@2x.webp 2x">
+                  <img srcset="img/author-marishka.jpg 1x, img/author-marishka@2x.jpg 2x" alt="Брюнетка" class="review__author-img" width="38">
+                </picture>
+                <span class="review__author-name">Маришка</span>
+              </p>
             </div>
           </li>
 
           <li class="places-slider__slide slide slide--macedonia">
             <h3 class="slide__title">Македония</h3>
-            <img class="slide__img" src="#" alt="Греция: гора">
             <p class="slide__text">
               В Македонии нашей целью будет посетить Палаошник, который расположился в удивительно красивой лесистой местности возле Охридского озера и Самуиловой твердыни. А также мы заберемся на вершину горы Татичев Камен где находится  археологический памятник Кокино в длину около 100 метров.
             </p>
@@ -204,13 +223,18 @@
               <p class="review__text">
                 Я бы сказал необычное старое здание. В архитектуре я не разбираюсь, но подъем в гору был очень веселым так как люди оказались легкими и заводными. Красота природы впечатлила, особенно после долгого пути в гору.
               </p>
-              <p class="review__author">Михаил Кузьмин</p>
+              <p class="review__author">
+                <picture>
+                  <source type="image/webp" srcset="img/author-michael.webp 1x, img/author-michael@2x.webp 2x">
+                  <img srcset="img/author-michael.jpg 1x, img/author-michael@2x.jpg 2x" alt="Брюнет" class="review__author-img" width="38">
+                </picture>
+                <span class="review__author-name">Михаил Кузьмин</span>
+              </p>
             </div>
           </li>
 
           <li class="places-slider__slide slide slide--montenegro">
             <h3 class="slide__title">Черногория</h3>
-            <img class="slide__img" src="#" alt="Греция: гора">
             <p class="slide__text">
               Черногория удивит нас самым большим в Европе каньоном реки Тара, который в некоторых местах высотой берегов доходит до 1300 метров, а шириной не превышает трех. При этом длина каньона составляет 80 км.
             </p>
@@ -220,11 +244,17 @@
               <p class="review__text">
                 Неописуемой красоты каньон! Ничего прекраснее в жизни не видела, разве что в фильмах :) Всем советую
               </p>
-              <p class="review__author">Анастасия Мей</p>
+              <p class="review__author">
+                <picture>
+                  <source type="image/webp" srcset="img/author-anastasia.webp 1x, img/author-anastasia@2x.webp 2x">
+                  <img srcset="img/author-anastasia.jpg 1x, img/author-anastasia@2x.jpg 2x" alt="Русоволосая девушка" class="review__author-img" width="38">
+                </picture>
+                <span class="review__author-name">Анастасия Мей</span>
+              </p>
             </div>
           </li>
 
-          <li class="places__slider slide slide--croatia">
+          <li class="places-slider__slide slide slide--croatia">
             <h3 class="slide__title">Хорватия</h3>
             <img class="slide__img" src="#" alt="Греция: гора">
             <p class="slide__text">
@@ -236,7 +266,13 @@
               <p class="review__text">
                 Мы поехали всей семьей, я, моя жена и родители. Пещера просто незабываема! А то, что все это формировалось тысячелетиями, мега необычно. Первоначально даже не верилось, но натур ни с чем не спутать по итогу :)
               </p>
-              <p class="review__author">Владимир Мулицин</p>
+              <p class="review__author">
+                <picture>
+                  <source type="image/webp" srcset="img/author-vladimir.webp 1x, img/author-vladimir@2x.webp 2x">
+                  <img srcset="img/author-vladimir.jpg 1x, img/author-vladimir@2x.jpg 2x" alt="Брюнет в очках" class="review__author-img" width="38">
+                </picture>
+                <span class="review__author-name">Владимир Мулицин</span>
+              </p>
             </div>
           </li>
         </ul>
