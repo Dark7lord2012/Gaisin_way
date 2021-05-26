@@ -137,7 +137,6 @@
 
   @media (max-width: $tablet-width-max) {
     & + .places-of-visit__list-item {
-      // margin-left: 30px;
       margin-left: 0;
     }
 
@@ -154,6 +153,8 @@
 }
 
 .places-of-visit__link {
+  position: relative;
+
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -162,6 +163,43 @@
   height: 430px;
 
   text-decoration: none;
+
+  &:hover,
+  &:focus {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 1;
+
+      background-color: rgba($dark-two, 0.6);
+
+      transition: 0.5s;
+    }
+
+    &::after {
+      content: "Смотреть подробнее";
+      position: absolute;
+      top: 50%;
+      z-index: 2;
+
+      box-sizing: border-box;
+      padding: 30px 25px;
+
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 17px;
+      color: $white;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+
+      border: 1px solid rgba($white, 0.7);
+      transform: translateY(-50%);
+    }
+  }
 
   @media (max-width: $tablet-width-max) {
     width: 288px;

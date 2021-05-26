@@ -146,6 +146,15 @@
 
   background-color: $accent;
 
+  &:hover,
+  &:focus {
+    background-color: $accent-hover;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
   @media (max-width: $tablet-width-max) {
     padding: 19px 50px;
 

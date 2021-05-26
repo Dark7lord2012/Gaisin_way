@@ -1,0 +1,8 @@
+.popup {
+  display: none;
+
+  &--opened {
+    display: flex;
+    position: fixed;
+  }
+}
