@@ -1,5 +1,9 @@
 .callback-form {
   margin-bottom: 169px;
+
+  @media (max-width: $tablet-width-max) {
+    margin-bottom: 81px;
+  }
 }
 
 .callback-form__wrapper {
@@ -10,6 +14,20 @@
   background-repeat: no-repeat;
   background-position: 27px top;
   background-size: contain;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/sunset-sky-sea@2x.jpg");
+  }
+
+  @media (max-width: $tablet-width-max) {
+    background-image: url("../img/sunset-sky-sea-tablet.jpg");
+    background-size: cover;
+    background-position: center;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/sunset-sky-sea-tablet@2x.jpg");
+    }
+  }
 }
 
 .callback-form__form {
@@ -26,6 +44,11 @@
   min-height: 315px;
   box-shadow: 0px 4px 30px rgba($shadow, 0.1);
   border-radius: 5px;
+
+  @media (max-width: $tablet-width-max) {
+    margin: auto;
+    min-height: 311px;
+  }
 }
 
 .callback-form__title {
@@ -126,4 +149,11 @@
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
+
+  @media (max-width: $tablet-width-max) {
+    padding: 19px 84px;
+    font-size: 10px;
+    line-height: 12px;
+    font-weight: 500;
+  }
 }

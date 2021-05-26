@@ -4,20 +4,61 @@
   &--active {
     position: relative;
     display: grid;
-    grid-template-areas:
-      "a e"
-      "b e"
-      "c e";
     grid-template-columns: 1fr 382px;
-    grid-template-rows: repeat(3, min-content);
+    grid-template-rows: repeat(4, min-content);
     justify-content: space-between;
+    align-items: flex-start;
     column-gap: 414px;
-    min-height: 596px;
+    min-height: 606px;
+    padding: 10px 0 0;
+
+    background-image: url("../img/card-greece.jpg");
+    background-repeat: no-repeat;
+    background-size: 430px 596px;
+    background-position: calc(50% + 100px) 0px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/card-greece@2x.jpg");
+    }
+
+    @media (max-width: $tablet-width-max) {
+      padding-top: 0;
+    }
+  }
+
+  &--greecy {
+    background-image: url("../img/card-greece.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/card-greece@2x.jpg");
+    }
+  }
+
+  &--macedonia {
+    background-image: url("../img/card-macedonia.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/card-macedonia@2x.jpg");
+    }
+  }
+
+  // Перемудрил я с этими селекторами
+  @media (max-width: $tablet-width-max) {
+    &--active {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 0 20px;
+
+      background-image: url("../img/card-greece-tablet.jpg");
+      background-position: center calc(100% - 33px);
+      background-size: contain ;
+    }
   }
 }
 
 .slide__title {
-  grid-area: a;
+  // grid-area: a;
   position: relative;
   margin-top: 0;
   margin-bottom: 48px;
@@ -35,31 +76,50 @@
     content: "";
     background-color: $accent;
   }
+
+  @media (max-width: $tablet-width-max) {
+    font-size: 30px;
+    line-height: 45px;
+    letter-spacing: 0;
+    margin-bottom: 22px;
+
+    &::after {
+      display: none;
+    }
+  }
 }
 
-.slide__img {
-  z-index: -1;
-  position: absolute;
-  top: -10px;
-  left: 470px;
-  display: flex;
-  grid-row-start: 1;
-  grid-row-end: -1;
-}
+// .slide__img {
+//   z-index: -1;
+//   position: absolute;
+//   top: -10px;
+//   left: 470px;
+//   display: flex;
+//   grid-row-start: 1;
+//   grid-row-end: -1;
+// }
 
 .slide__text {
-  grid-area: b;
+  // grid-area: b;
   margin-top: 0;
   margin-bottom: 49px;
+  grid-column: 1 / 2;
 
   font-size: 16px;
   line-height: 28px;
   font-weight: normal;
   letter-spacing: -0.47px;
+
+  @media (max-width: $tablet-width-max) {
+    text-align: center;
+    margin-bottom: 19px;
+    padding: 0 20px;
+  }
 }
 
 .slide__link {
-  grid-area: c;
+  // grid-area: c;
+  grid-row: 3 / 4;
   display: inline-block;
   width: max-content;
   max-width: 100%;
@@ -75,10 +135,23 @@
   letter-spacing: 2px;
   background-color: $accent;
   text-decoration: none;
+
+  @media (max-width: $tablet-width-max) {
+    padding: 19px 50px;
+    font-size: 10px;
+    line-height: 12px;
+    font-weight: 500;
+  }
 }
 
 .slide__review {
-  grid-area: e;
-  margin-top: 104px;
+  // grid-area: e;
+  margin-top: -32px;
   background-color: $white;
+  outline: 1px solid #00f;
+
+  @media (max-width: $tablet-width-max) {
+    margin-top: 110px;
+    width: 382px;
+  }
 }

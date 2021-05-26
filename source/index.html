@@ -11,26 +11,44 @@
   <link rel="preload" href="fonts/Montserrat-Bold.woff2" as="font" crossorigin="anonymous">
 </head>
 <body class="body">
-  <header class="body__header header">
+  <header class="body__header header header--no-js">
     <div class="header__wrapper wrapper">
-      <a href="header__logo">
+      <a class="header__logo" href="index.html">
         <img class="header__logo-img" width="58" height="22" src="img/logo.svg" alt="Way: логотип">
       </a>
+      <button class="header__toggle">
+        <span class="visually-hidden">Открыть/закрыть меню</span>
+        <svg width="30" height="30">
+          <use href="img/sprite.svg#icon-menu"></use>
+        </svg>
+        <svg width="22" height="22">
+          <use href="img/sprite.svg#icon-cross"></use>
+        </svg>
+      </button>
       <nav class="header__nav">
-        <button class="header__toggle">Открыть/закрыть меню</button>
         <ul class="site-list">
           <li class="site-list__item">
-            <a href="#" class="site-list__link">О путешествии</a>
+            <a href="#" class="site-list__link">
+              <span>О путешествии</span>
+              <svg width="25" height="25">
+                <use href="img/sprite.svg#icon-arrow-right"></use>
+              </svg>
+            </a>
           </li>
           <li class="site-list__item">
-            <a href="#" class="site-list__link">Цены</a>
+            <a href="#" class="site-list__link">
+              <span>Цены</span>
+              <svg width="25" height="25">
+                <use href="img/sprite.svg#icon-arrow-right"></use>
+              </svg>
+            </a>
           </li>
           <li class="site-list__item">
             <a class="site-list__link site-list__link--phone" href="tel:+749978468446">
               <svg width="30" height="30">
                 <use href="img/sprite.svg#icon-phone"></use>
               </svg>
-              +7 (499) -784-684-46
+              <span>+7 (499) -784-684-46</span>
             </a>
           </li>
         </ul>
@@ -69,7 +87,7 @@
           <li class="places-of-visit__list-item">
             <a class="places-of-visit__link" href="#">
               <picture>
-                <source media="(max-width: 1023px)" srcset="img/promo-back.jpg 1x, img/promo-back@2x.jpg">
+                <source media="(max-width: 1023px)" srcset="img/photo-greecy-tablet.jpg 1x, img/photo-greecy-tablet@2x.jpg 2x">
                 <img width="350" height="430" srcset="img/photo-greecy.jpg 1x, img/photo-greecy@2x.jpg" alt="Греция: гора">
               </picture>
               <span class="places-of-visit__link-label">Греция</span>
@@ -78,6 +96,7 @@
           <li class="places-of-visit__list-item">
             <a class="places-of-visit__link" href="#">
               <picture>
+                <source media="(max-width: 1023px)" srcset="img/photo-albania-tablet.jpg 1x, img/photo-albania-tablet@2x.jpg 2x">
                 <img width="350" height="430" srcset="img/photo-albania.jpg 1x, img/photo-albania@2x.jpg" alt="Албания: берег с высоты птичьего полета">
               </picture>
               <span class="places-of-visit__link-label">Албания</span>
@@ -86,6 +105,7 @@
           <li class="places-of-visit__list-item">
             <a class="places-of-visit__link" href="#">
               <picture>
+                <source media="(max-width: 1023px)" srcset="img/photo-macedonia-tablet.jpg 1x, img/photo-macedonia-tablet@2x.jpg 2x">
                 <img width="350" height="430" srcset="img/photo-macedonia.jpg 1x, img/photo-macedonia@2x.jpg" alt="Македония: церковь у берега">
               </picture>
               <span class="places-of-visit__link-label">Македония</span>
@@ -94,6 +114,7 @@
           <li class="places-of-visit__list-item">
             <a class="places-of-visit__link" href="#">
               <picture>
+                <source media="(max-width: 1023px)" srcset="img/photo-montenegro-tablet.jpg 1x, img/photo-montenegro-tablet@2x.jpg 2x">
                 <img width="350" height="430" srcset="img/photo-montenegro.jpg 1x, img/photo-montenegro@2x.jpg 2x" alt="Черногория: вид сверху на реку">
               </picture>
               <span class="places-of-visit__link-label">Черногория</span>
@@ -102,6 +123,7 @@
           <li class="places-of-visit__list-item">
             <a class="places-of-visit__link" href="#">
               <picture>
+                <source media="(max-width: 1023px)" srcset="img/photo-croatia-tablet.jpg 1x, img/photo-croatia-tablet@2x.jpg 2x">
                 <img width="350" height="430" srcset="img/photo-croatia.jpg 1x, img/photo-croatia@2x.jpg 2x" alt="Хорватия: наполненная водой пещера со сталактитами">
               </picture>
               <span class="places-of-visit__link-label">Хорватия</span>
@@ -133,11 +155,11 @@
         </ul>
 
         <ul class="places-slider__slides-list">
-          <li class="places-slider__slide slide slide--active">
+          <li class="places-slider__slide slide slide--greecy slide--active">
             <h3 class="slide__title">Греция</h3>
-            <picture>
+            <!-- <picture>
               <img class="slide__img" width="430" height="596" srcset="img/card-greece.jpg 1x, img/card-greece@2x.jpg 2x" alt="Греция: гора">
-            </picture>
+            </picture> -->
             <p class="slide__text">
               На севере Греции находится один из крупнейших комплексов монастырей, расположенных на вершинах скал. Название его «Метеора» буквально переводится как «висящие в воздухе». Этот монастырь основная цель нашего путешествия в Греции. После покарения скал из песчанника и обломочной горной породы, достигающих в высоту 600 метров, наградой будет неописуемая красота природы и атмосфера, царящая в монастырях Метеоры.
             </p>
@@ -154,7 +176,7 @@
             </div>
           </li>
 
-          <li class="places-slider__slide slide">
+          <li class="places-slider__slide slide slide--albania">
             <h3 class="slide__title">Албания</h3>
             <img class="slide__img" src="#" alt="Греция: гора">
             <p class="slide__text">
@@ -170,7 +192,7 @@
             </div>
           </li>
 
-          <li class="places-slider__slide slide">
+          <li class="places-slider__slide slide slide--macedonia">
             <h3 class="slide__title">Македония</h3>
             <img class="slide__img" src="#" alt="Греция: гора">
             <p class="slide__text">
@@ -186,7 +208,7 @@
             </div>
           </li>
 
-          <li class="places-slider__slide slide">
+          <li class="places-slider__slide slide slide--montenegro">
             <h3 class="slide__title">Черногория</h3>
             <img class="slide__img" src="#" alt="Греция: гора">
             <p class="slide__text">
@@ -202,7 +224,7 @@
             </div>
           </li>
 
-          <li class="places__slider slide">
+          <li class="places__slider slide slide--croatia">
             <h3 class="slide__title">Хорватия</h3>
             <img class="slide__img" src="#" alt="Греция: гора">
             <p class="slide__text">
@@ -247,10 +269,30 @@
               Ознакомьтесь с перечнем того, что входит в данный пакет
             </p>
             <ul class="price__service-list">
-              <li>Разработанный маршрут с гидом группы</li>
-              <li>Перелет, трансфер и проживание в отелях</li>
-              <li>Завтраки, ужины в отелях и ланчи на природе</li>
-              <li>Экскурсии по удивительно красивым местам Европы</li>
+              <li>
+                <svg class="price__icon-check" width="22" height="22">
+                  <use href="img/sprite.svg#icon-check"></use>
+                </svg>
+                Разработанный маршрут с гидом группы
+              </li>
+              <li>
+                <svg class="price__icon-check" width="22" height="22">
+                  <use href="img/sprite.svg#icon-check"></use>
+                </svg>
+                Перелет, трансфер и проживание в отелях
+              </li>
+              <li>
+                <svg class="price__icon-check" width="22" height="22">
+                  <use href="img/sprite.svg#icon-check"></use>
+                </svg>
+                Завтраки, ужины в отелях и ланчи на природе
+              </li>
+              <li>
+                <svg class="price__icon-check" width="22" height="22">
+                  <use href="img/sprite.svg#icon-check"></use>
+                </svg>
+                Экскурсии по удивительно красивым местам Европы
+              </li>
             </ul>
             <a class="price__link" href="#">Купить тур сейчас</a>
           </li>
@@ -264,11 +306,36 @@
               Ознакомьтесь с перечнем того, что входит в данный пакет
             </p>
             <ul class="price__service-list">
-              <li>Разработанный маршрут с гидом группы</li>
-              <li>Перелет и трансфер</li>
-              <li>Проживание в хостелах при отелях</li>
-              <li>Только завтраки в отелях</li>
-              <li>Экскурсии по удивительно красивым местам Европы</li>
+              <li>
+                <svg class="price__icon-check" width="22" height="22">
+                  <use href="img/sprite.svg#icon-check"></use>
+                </svg>
+                Разработанный маршрут с гидом группы
+              </li>
+              <li>
+                <svg class="price__icon-check" width="22" height="22">
+                  <use href="img/sprite.svg#icon-check"></use>
+                </svg>
+                Перелет и трансфер
+              </li>
+              <li>
+                <svg class="price__icon-check" width="22" height="22">
+                  <use href="img/sprite.svg#icon-check"></use>
+                </svg>
+                Проживание в хостелах при отелях
+              </li>
+              <li>
+                <svg class="price__icon-check" width="22" height="22">
+                  <use href="img/sprite.svg#icon-check"></use>
+                </svg>
+                Только завтраки в отелях
+              </li>
+              <li>
+                <svg class="price__icon-check" width="22" height="22">
+                  <use href="img/sprite.svg#icon-check"></use>
+                </svg>
+                Экскурсии по удивительно красивым местам Европы
+              </li>
             </ul>
             <a class="price__link" href="#">Купить тур сейчас</a>
           </li>
@@ -383,5 +450,6 @@
       </div>
     </div>
   </footer>
+  <script src="js/scripts.min.js"></script>
 </body>
 </html>

@@ -7,6 +7,16 @@
   padding: 0;
   margin: 0 11px 0 0;
   list-style: none;
+
+  @media (max-width: $tablet-width-max) {
+    width: 100%;
+    max-width: 100%;
+    margin-right: 0;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    background-color: $white;
+  }
 }
 
 .site-list__item {
@@ -16,6 +26,11 @@
 
 .site-list__item + .site-list__item {
   margin-left: 40px;
+
+  @media (max-width: $tablet-width-max) {
+    margin-left: 0;
+    margin-top: 30px;
+  }
 }
 
 .site-list__link {
@@ -24,6 +39,10 @@
   font-weight: 500;
   color: $dark;
   text-decoration: none;
+
+  svg {
+    display: none;
+  }
 
   &:hover,
   &:focus {
@@ -51,6 +70,28 @@
       margin-right: 10px;
       transform: translate(2px, 1px);
       stroke: currentColor;
+    }
+  }
+
+  @media (max-width: $tablet-width-max) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    flex-grow: 1;
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 600;
+    color: $grey-two;
+    background-color: $grey-three;
+
+    svg {
+      transform: translateY(3px);
+      display: flex;
+    }
+
+    &--phone {
+      display: none;
     }
   }
 }

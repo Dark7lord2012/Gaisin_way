@@ -1,23 +1,143 @@
 .header {
   box-sizing: border-box;
+
   outline: 1px solid red;
+
+  @media (max-width: $tablet-width-max) {
+    svg:nth-of-type(2) {
+      display: none;
+    }
+  }
+}
+
+.header--opened {
+  @media (max-width: $tablet-width-max) {
+    position: relative;
+
+    .header__nav {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+
+      display: flex;
+      margin-left: 0;
+      padding-top: 134px;
+
+      background-color: $white;
+    }
+
+    .header__toggle {
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 1;
+
+      margin-right: 0;
+
+      background-color: black;
+    }
+
+    svg:first-of-type {
+      display: none;
+    }
+
+    svg:nth-of-type(2) {
+      display: flex;
+    }
+  }
+}
+
+.header--no-js {
+  .header__wrapper {
+    flex-wrap: wrap;
+    padding-top: 15px;
+  }
+
+  .header__nav {
+    display: flex;
+    flex-grow: 1;
+    width: 100%;
+    margin: 25px -20px 0;
+
+    outline: 1px solid red;
+  }
+
+  .header__toggle {
+    display: none;
+  }
+
+  .header__logo {
+    margin-top: 0;
+  }
 }
 
 .header__wrapper {
   display: grid;
+  align-items: center;
   min-height: 99px;
   padding-top: 3px;
-  grid-template-columns: 60px 1fr;
-  align-items: center;
+
   outline: 1px solid red;
+
+  grid-template-columns: 60px 1fr;
+
+  @media (max-width: $tablet-width-max) {
+    display: flex;
+    justify-content: space-between;
+    min-height: 50px;
+    padding-top: 0;
+  }
 }
 
 .header__nav {
   display: flex;
-  margin-left: 20px;
   justify-content: flex-end;
+  margin-left: 20px;
+
+  @media (max-width: $tablet-width-max) {
+    display: none;
+  }
 }
 
 .header__toggle {
   display: none;
+
+  @media (max-width: $tablet-width-max) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    order: 1;
+    width: 72px;
+    height: 50px;
+    margin-right: -20px;
+
+    background-color: $accent;
+    border: none;
+
+    &:hover,
+    &:focus {
+      background-color: $accent-hover;
+    }
+
+    &:active {
+      opacity: 0.6;
+    }
+  }
+}
+
+.header--opened .header__toggle {
+  background-color: transparent;
+}
+
+.header__logo {
+  display: flex;
+
+  @media (max-width: $tablet-width-max) {
+    .header__logo-img {
+      width: 44px;
+      height: 17px;
+      margin-top: 3px;
+    }
+  }
 }

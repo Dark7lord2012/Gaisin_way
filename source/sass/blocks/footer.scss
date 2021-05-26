@@ -13,6 +13,14 @@
   padding: 0 10px 0 13px;
 
   outline: 1px solid red;
+
+  @media (max-width: $tablet-width-max) {
+    // overflow-x: hidden;
+    padding: 0 21px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 50px;
+  }
 }
 
 .footer__title {
@@ -34,6 +42,12 @@
   column-gap: 30px;
 
   grid-template-columns: 1fr 1fr 1fr;
+
+  @media (max-width: $tablet-width-max) {
+    column-gap: 25px;
+    border-right: 1px solid $grey;
+    padding-right: 45px;
+  }
 }
 
 .footer__links-list {
@@ -72,6 +86,12 @@
 
   // border-right: 1px solid $grey;
   // border-left: 1px solid $grey;
+
+  @media (max-width: $tablet-width-max) {
+    margin-left: 0;
+    padding-right: 0;
+    width: 281px;
+  }
 }
 
 .footer__contacts-list {
@@ -110,15 +130,27 @@
     font-size: 16px;
     line-height: 32px;
 
-    &::before {
-      width: 30px;
-      height: 30px;
+    svg {
+      fill: none;
+      stroke: $grey;
     }
   }
 }
 
 .footer__corporate-travels {
   width: 320px;
+
+  @media (max-width: $tablet-width-max) {
+    width: 100%;
+    margin-top: 27px;
+    padding-top: 30px;
+    border-top: 1px solid $grey;
+
+
+    .footer__title {
+      text-align: center;
+    }
+  }
 }
 
 .footer__text {
@@ -129,4 +161,9 @@
   font-size: 14px;
   line-height: 24px;
   color: rgba($dark, 0.5);
+
+  @media (max-width: $tablet-width-max) {
+    width: 100%;
+    text-align: center;
+  }
 }
